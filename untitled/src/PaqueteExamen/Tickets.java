@@ -1,16 +1,28 @@
 package PaqueteExamen;
 
-public class Tickets extends Pasajeros{
+import javax.xml.transform.Source;
+
+public class Tickets extends Viajes{
     private String id;
 
     //Constructores
-    public Tickets(String tipo, String nombre, String apellido, String ci, String id)
+    public Tickets(String tipo, String id)
     {
-        super(tipo, nombre, apellido, ci);
+        super(tipo);
         this.id = id;
     }
 
     public Tickets()
     {
+    }
+
+
+    //Getters y setters
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

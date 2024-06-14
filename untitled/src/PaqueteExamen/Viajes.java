@@ -1,7 +1,10 @@
 package PaqueteExamen;
 
+import java.util.Scanner;
+
 public class Viajes {
     private String tipo;
+    Scanner scanner = new Scanner(System.in);
 
     //Constructores
     public Viajes(String tipo)
