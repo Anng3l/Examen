@@ -24,8 +24,17 @@ public class Servicios extends Rutas {
 
     public Float Precio(Integer tipo_s)
     {
+        switch (getTipo_s())
+        {
+            case 1:
+                System.out.println("De Quito a destino\n");
+                break;
 
-        return 0f;
+            case 2:
+                System.out.println("De destino a Quito\n");
+                break;
+        }
+
     }
 
     public void MostrarInfo()
@@ -33,5 +42,32 @@ public class Servicios extends Rutas {
         System.out.println("Tipo de viaje: " + getTipo() + "\nId de ticket: " + getId());
         System.out.println("Tipo de ruta: " + getTipo_r() + "\nRuta: " + getRuta() + "\n");
         System.out.println("tipo");
+    }
+
+    //Getters y Setters
+    public Integer getTipo_s() {
+        return tipo_s;
+    }
+    public String getAsientos() {
+        return asientos;
+    }
+    public String getMaletas() {
+        return maletas;
+    }
+    public String getServicios() {
+        return servicios;
+    }
+
+    public void setTipo_s(Integer tipo_s) {
+        this.tipo_s = tipo_s;
+    }
+    public void setAsientos(String asientos) {
+        this.asientos = asientos;
+    }
+    public void setMaletas(String maletas) {
+        this.maletas = maletas;
+    }
+    public void setServicios(String servicios) {
+        this.servicios = servicios;
     }
 }

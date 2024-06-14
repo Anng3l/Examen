@@ -57,6 +57,40 @@ public class Rutas extends Tickets{
         return valor;
     }
 
+    public void ImprimirInfo()
+    {
+        System.out.println("El tipo de ruta es: ");
+        switch (getTipo_r())
+        {
+            case 1:
+                System.out.println("De Quito a destino\n");
+                break;
+
+            case 2:
+                System.out.println("De destino a Quito\n");
+                break;
+        }
+
+        switch (getRuta())
+        {
+            case 1:
+                System.out.println("1) Quito-Guayaquil\n");
+                break;
+
+            case 2:
+                System.out.println("2) Quito-Puyo\n");
+                break;
+
+            case 3:
+                System.out.println("3) Quito-Tulcán\n");
+                break;
+
+            case 4:
+                System.out.println("4) Quito-Riobamba\n");
+                break;
+        }
+    }
+
     //Getters y Setters
     public Integer getTipo_r() {
         return tipo_r;
