@@ -24,17 +24,34 @@ public class Servicios extends Rutas {
 
     public Float Precio(Integer tipo_s)
     {
+        Float j = 0.30f;
+        Float valor = 0f;
         switch (getTipo_s())
         {
             case 1:
-                System.out.println("De Quito a destino\n");
+                Integer x;
+                System.out.println("Selecciones su asiento\n");
+                System.out.println("1) ventana   2) pasillo   3)Al final   4)Adelante\n");
+                x = scanner.nextInt();
+                if (x == 1)
+                {
+                    setAsientos("Ventana");
+                } else if (x == 2) {
+                    setAsientos("Pasillo");
+                } else if (x == 3) {
+                    setAsientos("Al final");
+                } else if (x == 4) {
+                    setAsientos("Adelante");
+                }
+                j = 0f;
                 break;
 
             case 2:
-                System.out.println("De destino a Quito\n");
+                setServicios("Televisión, internet, Cafetera, Snacks");
+                setMaletas("2 Maletas");
                 break;
         }
-
+        return j;
     }
 
     public void MostrarInfo()
